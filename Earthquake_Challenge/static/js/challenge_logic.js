@@ -31,8 +31,9 @@ let map = L.map('mapid', {
 // Create a base layer that holds all three maps.
 let baseMaps = {
   "Streets": streets,
-  "Satellite": satelliteStreets,
-  "Dark": dark
+  "Satellite": satelliteStreets
+  // ,
+  // "Dark": dark
 };
 
 // 1. Add a 2nd layer group for the tectonic plate data.
@@ -43,7 +44,9 @@ let majorearthquakes = new L.LayerGroup();
 
 // 2. Add a reference to the tectonic plates group to the overlays object.
 let overlays = {
-  "Earthquakes": allEarthquakes, "TectonicPlates" : tectonicPlates , "Major Earthquakes": majorearthquakes
+  "Earthquakes": allEarthquakes, 
+  "TectonicPlates" : tectonicPlates ,
+  "Major Earthquakes": majorearthquakes
 };
 
 // Then we add a control to the map that will allow the user to change which
